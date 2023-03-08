@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Suryawanshi</title>
+</head>
+<body>
+    {% load static %}
+    <nav>
+        <div class="logo">
+          <img src="{% static 'logo.png' %}" alt="Ankit">
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="/project/">Projects</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contactus/">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <h4 id="typewriter" class="heading"></h4>
+
+
+      </div>
+      <div class="content">
+        <img src="{% static 'main.png' %}" alt="Your Image">
+        <div class="text">
+          <h1>Welcome to the digital world of Ankit Suryawanshi,</h1>
+          <p> a full-stack web developer and problem solver based in Madhya Pradesh, India!<br><br>
+            If you are looking for a person who can help you to build your Website, then I am the person you are looking for.<br><br>
+            
+I believe that the best way to learn is by doing, and that's why I love taking on new challenges and
+ exploring uncharted territory. Some of my most exciting projects include An E-Commerce Website and Student Registration Website, which have allowed me to push the boundaries of what's possible and make a real impact in people's lives.
+
+        </p>
+        </div>
+      </div>
+
+    
+</body>
+</html>
+
+<style>
+
+
+.content img {
+  float: left;
+  width: 150px;
+  height: auto;
+  margin-bottom: 500px;
+}
+
+.content .text {
+  margin-left: 220px;
+  margin-top: 100px;
+  color: white;
+}
+
+
+.right{
+    color: white;
+}
+
+.left img {
+  width: 20%;
+  height: auto;
+}
+
+
+body{
+    background-color: #000;
+}
+
+    nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #000;
+  padding: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  background-color: #000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  background-color: #000;
+}
+
+.nav-links li {
+  margin-right: 30px;
+  background-color: #000;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #000;
+  
+}
+
+.nav-links li a:hover {
+  color: #ffc107;
+}
+
+#typewriter {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #333;
+  animation: typing 1s steps(30) infinite;
+}
+
+#typewriter {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(241, 216, 216);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #333;
+}
+
+
+</style>
+<script>
+const heading = "Welcome To My Website!";
+let i = 0;
+let speed = 30;
+let timer;
+
+function typeWriter() {
+  if (i < heading.length) {
+    document.getElementById("typewriter").innerHTML += heading.charAt(i);
+    i++;
+    timer = setTimeout(typeWriter, speed);
+  } else {
+    clearTimeout(timer);
+  }
+}
+
+typeWriter();
+
+</script>

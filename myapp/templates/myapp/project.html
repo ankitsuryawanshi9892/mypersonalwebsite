@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projects-Ankit Suryawanshi</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    {% load static %}
+    
+    <nav>
+        <div class="logo">
+          <h4>Ankit<br>Suryawanshi</h4>
+        </div>
+
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/ankit-suryawanshi-4b4757218/" target="_blank"><img src="{% static 'linkedin1.png'%}" alt="LinkedIn"></a>
+          <a href="https://github.com/ankitsuryawanshi9892" target="_blank"><img src="{% static 'github1.png'%}" alt="GitHub"></a>
+          <a href="https://www.youtube.com/channel/UCWRT9TY0EbadaCGH5yBnNgA" target="_blank"><img src="{% static 'youtube1.png'%}" alt="YouTube"></a>
+        </div>
+
+
+        <ul class="nav-links">
+          <li><a href="">Projects</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contactus/">Contact</a></li>
+        </ul>
+      </nav>
+
+
+
+    <div class="container">
+      <div class="header">
+        <h1>My Projects</h1>
+        <hr>
+      </div>
+      <div class="content">
+        <div class="project">
+          <h2>Project 1</h2>
+          <div class="popup">
+          <p>An E-Commerce Website</p>
+          <img src="{% static 'Screenshot (142).png' %}" alt="Project 1 Image">
+          <p>This is an E-Commerce Website just like Amazon, Flipkart, Snapdeal etc. which I have developed using django, HTML, CSS and JavaScript. You can visit my project by clicking on view project.</p>
+          <a href="https://github.com/ankitsuryawanshi9892/django_project02" target="_blank" class="button">View Project</a>
+          <a href="https://github.com/ankitsuryawanshi9892/django_project02" target="_blank"  class="text">View Project</a>
+           </div>
+        </div>
+        <div class="project">
+          <h2>TextUtils</h2>
+          <div class="popup">
+          <p>Web Application</p>
+          <img src="{% static 'Screenshot (143).png'%}" alt="Project 2 screenshot">
+          <p>This is my textutils website I have developed using django framework. We can perform different operations on the text written in the textarea. In this project I haven't used much HTML and CSS.</p>
+          <a href="https://github.com/ankitsuryawanshi9892/textutils" class="button" target="_blank">View Project</a>
+          <a href="https://github.com/ankitsuryawanshi9892/textutils" target="_blank"  class="text">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+
+.social-icons{
+  display: flex;
+  align-items: center;
+  margin-left: 110px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.social-icons img:hover {
+  transform: scale(1.05);
+  background-color: #ccc;
+  box-shadow: 0px 0px 10px rgb(72, 65, 65);  
+}
+
+
+body{
+    background-color: #000;
+}
+
+.popup .text {
+  display: none;
+}
+
+.project:hover .text {
+  display: block;
+  position: absolute;
+  bottom: 270px;
+  left: 50%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+
+.popup:hover img {
+  filter: brightness(30%);
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #000;
+  padding: 10px;
+}
+
+.logo h4 {
+  font-family: cursive;
+  height: 50px;
+  color: white;
+  width: auto;
+  background-color: #000;
+}
+
+.nav-links {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  background-color: #000;
+}
+
+.nav-links li {
+  display: block;
+  margin-right: 30px;
+  text-align: center;
+  background-color: #000;
+}
+
+.nav-links li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 18px;
+  background-color: #000;
+  
+}
+
+.nav-links li a:hover {
+  text-shadow: #ffc107;
+  text-decoration: underline;
+  
+
+}
+
+.container {
+    color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  color: white;
+  font-family:  Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  justify-content: space-between;
+}
+
+.project{
+    color: white;
+  width: calc(33.33% - 20px);
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project:hover {
+  box-shadow: 0px 0px 10px white;
+  transform: scale(1.05);
+  opacity: 0.7;
+  background-color: rgb(67, 52, 52)
+  transition : background-color 0.5s ease;
+
+}
+
+
+
+
+.project img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.project h2 {
+    color: white;
+  margin-bottom: 10px;
+}
+
+.project p {
+    color: white;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  border: 1px solid white;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 
+}
+
+.button:hover{
+  background-color: black;
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px white;
+  transform: scale(1.05);
+}
+
+.header .content .project:hover{
+    mask-type: luminance;
+    color: aliceblue;
+}
+</style>
+
